@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241 241 241);
+}
+
+#game{
+    max-width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    height: 300px;
+    position: relative;
+    margin-top: 80px;
+    background-size: cover;
+    background-position: 0px 425px;
+}
+
+#dino{
+    width: 90px;
+    height: 80px;
+    position: absolute;
+    top: 218px;
+    filter: drop-shadow(10px 0px 14px black);
+}
+
+#cactu{
+    width: 80px;
+    height: 75px;
+    position: absolute;
+    top: 226px;
+    left: 90%;
+    filter: drop-shadow(10px 0px 30px black);
+}
+
+#btjump{
+    background-image: url(btup.png);
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.pulo{
+    animation: pulo 0.5s linear;
+}
+
+@keyframes pulo{
+    0%{top: 218px}
+    25%{top: 158px}
+    50%{top: 108px}
+    75%{top: 158px}
+    100%{top: 218px}
+}
+
+.move{
+    animation: move 1.8s linear infinite;
+}
+
+/*
+@keyframes move{
+    0%{left: 90%;}
+    100%{left: -15%;}
+}
+
+
+@media screen and (max-width: 700px){
+    .pulo{
+        animation: pulo 1s linear;
+    }
+
+    #game{
+        background-position: 0px 300px;
+    }
+}
